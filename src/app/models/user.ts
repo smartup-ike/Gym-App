@@ -4,4 +4,5 @@ export interface User {
   name: string;
   adress: string;
   age: number;
+  isAdmin?: boolean;
 }

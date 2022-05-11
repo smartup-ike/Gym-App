@@ -40,7 +40,7 @@ import { MembersComponent } from './views/members/members.component';
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase }

@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  Auth,
-  signInWithEmailAndPassword,
-  signOut,
-} from '@angular/fire/auth';
+import { Auth, signInWithEmailAndPassword, signOut} from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -11,7 +7,9 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  constructor(private auth: Auth, private router: Router) { }
+  constructor(
+    private auth: Auth,
+    private router: Router,) { }
 
   async login(email: string, password: string) {
     await signInWithEmailAndPassword(this.auth, email, password);
