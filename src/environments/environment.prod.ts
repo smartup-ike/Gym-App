@@ -1,4 +1,5 @@
 export const environment = {
+  production:true,
   gym: {
     firebase: {
       projectId: 'gym-hr',

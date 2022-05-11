@@ -1,0 +1,17 @@
+<div class="mx-1 d-flex justify-content-center">
+  <form (submit)="signIn()" style="width: 100%; max-width: 300px;">
+    <img [src]="logoUrl" style="max-width: 300px;" class="mt-5 logo">
+    <mat-form-field class="d-block">
+      <mat-label>Διεύθνση e-mail</mat-label>
+      <input matInput [(ngModel)]="email" name="email">
+    </mat-form-field>
+    <mat-form-field class="d-block">
+      <mat-label>Κωδικός πρόσβασης</mat-label>
+      <input matInput [(ngModel)]="password" name="password" type="password">
+    </mat-form-field>
+    <button type="submit" mat-raised-button class="d-block w-100" [color]='"primary"'>Είσοδος</button>
+    <div class="text-right mt-2">
+
+
+    </div>
+  </form>

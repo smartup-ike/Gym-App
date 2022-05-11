@@ -12,6 +12,7 @@ export const environment = {
     messagingSenderId: '917269855356',
     measurementId: 'G-LW9FPQMM23',
   },
+  loginLogoUrl: "assets/gym-sport-logo.jpeg",
   production: false,
 };
 
