@@ -13,6 +13,7 @@ export class AuthService {
 
   async login(email: string, password: string) {
     await signInWithEmailAndPassword(this.auth, email, password);
+    this.router.navigate(['main'])
   }
 
   async logout() {

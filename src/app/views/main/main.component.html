@@ -1,0 +1,26 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav style="width: 300px;" #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content class="d-flex flex-column ">
+    <mat-toolbar color="primary" class="flex-shrink-0 toolbar">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <div class="admin flex-grow-1"><span >Administrator</span></div>
+        <div class="mx-4">
+          <span class="col name">{{user?.name}}</span>
+          <div class="w-100"></div>
+          <h4 class="col email">{{user?.email}}</h4>
+        </div>
+        <div ><img src="../../../assets/logout.png" class="pointer icon" (click)="logOut()"></div>
+      </div>
+    </mat-toolbar>
+    <div class="m-3 flex-grow-1 overflow-auto">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
