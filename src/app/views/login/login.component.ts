@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
   async signIn() {
     try {
       await this.auth.login(this.email, this.password);
-      this.router.navigate(['home']);
     } catch (error) {
       console.error(error);
       alert(error);
